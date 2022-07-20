@@ -39,7 +39,7 @@ class _StoryPageState extends State<StoryPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
+              const Expanded(
                 flex: 12,
                 child: Center(
                   child: Text(
@@ -59,7 +59,7 @@ class _StoryPageState extends State<StoryPage> {
                     //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
                   },
                   style: ElevatedButton.styleFrom(primary: Colors.red),
-                  child: Text(
+                  child: const Text(
                     //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
                     'Choice 1',
                     style: TextStyle(
@@ -68,7 +68,7 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20.0,
               ),
               Expanded(
@@ -79,7 +79,7 @@ class _StoryPageState extends State<StoryPage> {
                       //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
                     },
                     style: ElevatedButton.styleFrom(primary: Colors.green),
-                    child: Text(
+                    child: const Text(
                       //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
                       'Choice 2',
                       style: TextStyle(
