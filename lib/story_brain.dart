@@ -56,10 +56,8 @@ class StoryBrain {
   }
 
   //TODO: Step 17 - Create a method called nextStory(), it should not have any outputs but it should have 1 input called choiceNumber which will be the choice number (int) made by the user.
-  void nextStory( int storyNumber) {
-    if (storyNumber < _storyData.length-1) {
-      storyNumber++;
-    }
+  void nextStory( int userChoice) {
+
   }
 }
 
