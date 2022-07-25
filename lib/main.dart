@@ -63,21 +63,23 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                   flex: 2,
-                child: ElevatedButton(
-                  onPressed: () {
-                    //Choice 1 made by user.
-                    //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
-                    setState(() {
-                      storyBrain.nextStory(1);
-                    });
-                  },
-                  style: ElevatedButton.styleFrom(primary: Colors.red),
-                  child: Text(
-                    //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
-                    storyBrain.getChoice1(),
-                    // 'Choice 1',
-                    style: TextStyle(
-                      fontSize: 20.0,
+                child: Visibility(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      //Choice 1 made by user.
+                      //TODO: Step 18 - Call the nextStory() method from storyBrain and pass the number 1 as the choice made by the user.
+                      setState(() {
+                        storyBrain.nextStory(1);
+                      });
+                    },
+                    style: ElevatedButton.styleFrom(primary: Colors.red),
+                    child: Text(
+                      //TODO: Step 13 - Use the storyBrain to get the text for choice 1.
+                      storyBrain.getChoice1(),
+                      // 'Choice 1',
+                      style: TextStyle(
+                        fontSize: 20.0,
+                      ),
                     ),
                   ),
                 ),
@@ -87,21 +89,24 @@ class _StoryPageState extends State<StoryPage> {
               ),
               Expanded(
                 flex: 2,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      //Choice 2 made by user.
-                      //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
-                      setState(() {
-                        storyBrain.nextStory(2);
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(primary: Colors.green),
-                    child: Text(
-                      //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
-                      storyBrain.getChoice2(),
-                      // 'Choice 2',
-                      style: TextStyle(
-                        fontSize: 20.0,
+                  child: Visibility(
+                    visible: storyBrain.buttonShouldBeVisible(),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        //Choice 2 made by user.
+                        //TODO: Step 19 - Call the nextStory() method from storyBrain and pass the number 2 as the choice made by the user.
+                        setState(() {
+                          storyBrain.nextStory(2);
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(primary: Colors.green),
+                      child: Text(
+                        //TODO: Step 14 - Use the storyBrain to get the text for choice 2.
+                        storyBrain.getChoice2(),
+                        // 'Choice 2',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                        ),
                       ),
                     ),
                   ),
@@ -114,5 +119,6 @@ class _StoryPageState extends State<StoryPage> {
   }
 }
 //TODO: Step 24 - Run the app and try to figure out what code you need to add to this file to make the story change when you press on the choice buttons.
+//Step 24 Completed.
 
 //TODO: Step 29 - Run the app and test it against the Story Outline to make sure you've completed all the steps. The code for the completed app can be found here: https://github.com/londonappbrewery/destini-challenge-completed/
